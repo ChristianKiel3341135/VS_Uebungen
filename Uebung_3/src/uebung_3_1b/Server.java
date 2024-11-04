@@ -13,20 +13,17 @@ public class Server {
             while (true) {
                 DatagramPacket DpReceive = new DatagramPacket(buffer, buffer.length);
 
-                // Step 3 : revieve the data in byte buffer.
                 socket.receive(DpReceive);
 
                 System.out.println("Client:-" + ConvertByteToString(buffer));
 
-                // Exit the server if the client sends "bye"
                 if (ConvertByteToString(buffer).toString().equals("Ende"))
                 {
                     System.out.println("Client hat Ende gesendet... Server wird gestoppt");
                     break;
                 }
-
-                // Clear the buffer after every message.
-                buffer = new byte[65535];
+                //clear buffer
+                buffer = new byte[100];
             }
         } catch (SocketException e) {
             e.printStackTrace();
