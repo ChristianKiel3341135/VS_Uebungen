@@ -39,7 +39,8 @@ public class Server implements Runnable{
                 Socket socket = this.serverSocket.accept();
                 OutputStream outputStream = socket.getOutputStream();
                 PrintWriter writer = new PrintWriter(outputStream); //Daten an den uebung_3_1a.Client senden
-                List<String> file = Files.readAllLines(Path.of("D:\\workspace\\VS\\Uebung_3\\src\\uebung_3_2\\index.html"));
+                System.out.println("Current working directory: " + System.getProperty("user.dir"));
+                List<String> file = Files.readAllLines(Path.of("Uebung_3\\src\\uebung_3_2\\index.html"));
 
                 // HTTP Statuszeile und Header senden
                 writer.println("HTTP/1.1 200 OK");
