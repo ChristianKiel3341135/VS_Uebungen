@@ -7,9 +7,10 @@ class ClientRequest implements Runnable {
 
     private Socket socket;
     private MessageStore store;
+
     public ClientRequest(Socket connection, MessageStore store) {
-        this.store = store;
         this.socket = connection;
+        this.store = store;
     }
 
     public void run() {
