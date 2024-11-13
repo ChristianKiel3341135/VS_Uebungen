@@ -1,3 +1,5 @@
+package Uebung4_1;
+
 public class Message {
     private String sender;
     private String receiver;

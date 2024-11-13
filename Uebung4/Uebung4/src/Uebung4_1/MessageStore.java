@@ -1,3 +1,5 @@
+package Uebung4_1;
+
 import java.util.*;
 
 public class MessageStore {

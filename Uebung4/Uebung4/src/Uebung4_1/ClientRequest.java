@@ -1,3 +1,5 @@
+package Uebung4_1;
+
 import java.io.*;
 import java.net.Socket;
 
@@ -23,7 +25,7 @@ class ClientRequest implements Runnable {
                 String command = eingabe.substring(0,3);
                 String message = eingabe.substring(3);
 
-                System.out.println("Client: " + eingabe + " cmd: " + command);
+                System.out.println("Uebung4_1.Client: " + eingabe + " cmd: " + command);
                 switch (command) {
                     case "REG":
                         message = message.strip();

@@ -1,3 +1,5 @@
+package Uebung4_1;
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -22,7 +24,7 @@ public class MessagingService{
         ExecutorService es = Executors.newFixedThreadPool(10);
         try {
             serverSocket = new ServerSocket(8080);
-            System.out.println("MessagingService started...");
+            System.out.println("Uebung4_1.MessagingService started...");
 
             while(true) {
                 try {

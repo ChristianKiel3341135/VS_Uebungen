@@ -1,3 +1,5 @@
+package Uebung4_1;
+
 import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
@@ -21,7 +23,7 @@ public class Client {
                     writer.println(eingabe);
                     writer.flush();
                     if(eingabe.equals("exit")) {
-                        System.out.println("Client stopped");
+                        System.out.println("Uebung4_1.Client stopped");
                         System.exit(0);
                     }
                 }
