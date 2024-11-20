@@ -1,0 +1,10 @@
+D:\workspace\VS\vs_grpc-streams\src\main\java\de\othr\vs\client\BewertungsObserver.java
+D:\workspace\VS\vs_grpc-streams\src\main\java\de\othr\vs\client\Client.java
+D:\workspace\VS\vs_grpc-streams\src\main\java\de\othr\vs\server\MesswertServer.java
+D:\workspace\VS\vs_grpc-streams\src\main\java\de\othr\vs\server\MesswertServiceImpl.java
+D:\workspace\VS\vs_grpc-streams\target\generated-sources\protobuf\grpc-java\vs\uebung6\MesswertServiceGrpc.java
+D:\workspace\VS\vs_grpc-streams\target\generated-sources\protobuf\java\vs\uebung6\Bewertung.java
+D:\workspace\VS\vs_grpc-streams\target\generated-sources\protobuf\java\vs\uebung6\BewertungOrBuilder.java
+D:\workspace\VS\vs_grpc-streams\target\generated-sources\protobuf\java\vs\uebung6\Messwert.java
+D:\workspace\VS\vs_grpc-streams\target\generated-sources\protobuf\java\vs\uebung6\MesswertOrBuilder.java
+D:\workspace\VS\vs_grpc-streams\target\generated-sources\protobuf\java\vs\uebung6\Service.java

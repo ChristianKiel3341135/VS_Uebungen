@@ -1,0 +1,20 @@
+syntax = "proto3";
+package vs.uebung6;
+option java_multiple_files = true;
+import "google/protobuf/timestamp.proto"; // see link "Protocol Buffers Well-Known Types" in README for pre-defined types
+
+message Messwert {
+  string name = 1;
+  double wert = 2;
+}
+
+message Bewertung {
+  string kommando = 1;
+  google.protobuf.Timestamp datum = 2;
+}
+
+service MesswertService {
+  rpc uploadMessWert(Messwert) returns (Bewertung);
+  rpc uploadWertePerStream(stream Messwert) returns (stream Bewertung);
+}
+
