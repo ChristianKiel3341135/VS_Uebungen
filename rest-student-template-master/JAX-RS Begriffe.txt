@@ -1,0 +1,47 @@
+@XmlRootElement:
+
+Markiert Klassen als marshalbar/unmarshalbar. Definiert XML als Datenformat für die Anfragen und Antworten.
+
+Warum ein leerer Konstruktor?
+
+JAX-RS erstellt zuerst das Objekt mit dem Default Konstruktor und weißt anschließend die Werte der Felder aus der XML Datei zu.
+Ohne den leeren Konstruktor würde die Instanziierung des Student-Objekts fehlschlagen,
+weil JAXB nicht weiß, wie es Konstruktorparameter aus der XML-Datenstruktur ableiten soll.
+
+@XmlAccessorType:
+
+Die Annotation @XmlAccessorType steuert, ob JAXB Felder, Getter-Methoden, oder beides für das XML-Binding verwenden soll.
+Optionen und Standard:
+Die Annotation akzeptiert einen Wert vom Typ XmlAccessType, der eine von vier Strategien definiert:
+
+    XmlAccessType.FIELD (häufig genutzt):
+        JAXB bindet alle nicht-statischen, nicht-transienten Felder der Klasse, unabhängig von deren Sichtbarkeit (private, protected, public).
+        Getter-Methoden werden ignoriert, es sei denn, sie sind explizit mit JAXB-Annotationen versehen.
+
+    XmlAccessType.PROPERTY:
+        JAXB bindet nur die Felder, die über getter/setter-Methoden zugänglich sind (JavaBean-Standard).
+        Direkt deklarierte Felder werden ignoriert.
+
+    XmlAccessType.PUBLIC_MEMBER:
+        JAXB bindet alle öffentlichen Felder und getter/setter-Methoden.
+        Nicht-öffentliche Felder werden ignoriert.
+
+    XmlAccessType.NONE:
+        JAXB bindet keine Felder oder Methoden, es sei denn, sie sind explizit mit JAXB-Annotationen versehen.
+
+@XmlAttribute
+Wirkung:
+
+Mit @XmlAttribute wird ein Feld oder eine Methode explizit als Attribut eines XML-Elements gekennzeichnet.
+
+Merkmale:
+
+Statt als untergeordnetes XML-Element wird das annotierte Feld als Attribut des XML-Elements dargestellt.
+Nützlich, um Metadaten oder kleinere Informationen in Attributen darzustellen.
+
+@XmlTransient:
+Die Annotation @XmlTransient weist JAXB an, ein Feld oder eine Methode nicht in die XML-Darstellung einzubinden.
+Typische Anwendungsfälle:
+
+Felder oder Methoden, die für das XML irrelevant sind.
+Temporäre Daten oder Felder, die aus Sicherheits- oder Designgründen nicht in der XML-Ausgabe erscheinen sollen.
